@@ -52,11 +52,17 @@ class PortScaner(threading.Thread):
 
     def banner():
         print(
-
-            
-
+            #     #         #     #
+            ##    #   ####  ##   ##    ##    #####
+            # #   #  #    # # # # #   #  #   #    #
+            #  #  #  #    # #  #  #  #    #  #    #
+            #   # #  #    # #     #  ######  #####
+            #    ##  #    # #     #  #    #  #
+            #     #   ####  #     #  #    #  #
         )
+        
 if __name__ == '__main__':
+    banner()
     parser = optparse.OptionParser('Example : python %prog -i 127.0.0.1 -p 80 \n    python %prog -i 127.0.0.1 -p 1-100\n')
     parser.add_option('-i','--ip',dest='targetIP',default='127.0.0.1',type='string',help='target ip')
     parser.add_option('-p','--port', dest='port', default='80', type='string', help='scan port')
